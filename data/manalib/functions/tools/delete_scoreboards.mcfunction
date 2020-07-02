@@ -1,0 +1,7 @@
+scoreboard objectives remove ml_mana
+scoreboard objectives remove ml_max_mana
+scoreboard objectives remove ml_add
+scoreboard objectives remove ml_sub
+scoreboard objectives remove ml_percent_mana
+scoreboard objectives remove ml_opnum
+scoreboard objectives remove ml_cooldown
