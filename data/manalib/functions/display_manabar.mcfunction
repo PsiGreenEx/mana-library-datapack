@@ -1,6 +1,4 @@
-scoreboard players operation @s ml_percent_mana = @s ml_mana
-scoreboard players operation @s ml_percent_mana *= mlHundred ml_opnum
-scoreboard players operation @s ml_percent_mana /= @s ml_max_mana
+function manalib:get_percent_mana
 
 execute if score @s ml_percent_mana matches 100 run title @s actionbar [{"score": {"name": "*", "objective": "ml_mana"}, "color": "aqua"}, {"nbt": "Symbol", "storage": "manalib:manabar"}, {"nbt": "1", "storage": "manalib:manabar", "interpret": true}]
 execute if score @s ml_percent_mana matches 96..99 run title @s actionbar [{"score": {"name": "*", "objective": "ml_mana"}, "color": "aqua"}, {"nbt": "Symbol", "storage": "manalib:manabar"}, {"nbt": "2", "storage": "manalib:manabar", "interpret": true}]
