@@ -56,4 +56,7 @@ execute unless data storage manalib:config DefaultStats.ManaRegen.Enabled run da
 execute unless data storage manalib:config DefaultStats.MaxMana run data modify storage manalib:config DefaultStats.MaxMana set value 100.0f
 #endregion
 
+#init new players
+execute as @a unless entity @s[scores={ml_max_mana=-2147483648..2147483647}] store result score @s ml_max_mana run data get storage manalib:config DefaultStats.MaxMana
+
 tellraw @a {"text": "Mana Library has loaded!", "color": "blue", "hoverEvent": {"action": "show_text", "contents": "Thanks for using my pack!"}}
